@@ -33,3 +33,9 @@ There is no standard definition for microservices. According to Martin Fowler ho
 Microservices are also supposed to be independently deployable via an automated process. They can each be written in a different language too, all the while supporting different functionalities of a single application. They are autonomous, self-contained, and loosely coupled.
 
 ## 4. 3-tier vs Microservices
+
+A traditional 3-tier architecture consists of a Presentation layer (which consists of UI and display-related logic), a Business layer (which consists of all application logic), and a Database layer (which contains all the data). If a particular application consists of say two modules, the Presentation layer and the Business layer both contain two submodules each, and the database is shared by both modules.
+
+If there is a change in the Business layer of module-2, the entire layer has to be redeployed. Similarly, if some maintenance activity is to be performed to a part of database used by module-1, the entire database has to be take offline and the activity performed.
+
+Microservices, on the other hand, encapsulate the entire application into a separate application. Each service has its own presentation layer, business layer, and even database.
